@@ -1,0 +1,136 @@
+<!doctype html>
+<html>
+<head>
+<title>悍将三国</title>
+<meta charset="UTF-8">
+<meta content="width=960,user-scalable=no" name="viewport" id="viewport">
+<!--
+<meta http-equiv="cache-control" content="no-cache">
+<meta http-equiv="expires" content="mon, 22 jul 2002 11:12:01 GMT">
+<meta http-equiv="pragma" content="no-cache">-->
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+<meta name="apple-touch-fullscreen" content="yes" />
+<meta name="format-detection" content="telephone=no" />
+<meta name="description" content="悍将三国" />
+<link rel="stylesheet" type="text/css" href="https://img2.hanjiangsanguo.com/h5cdn/20151225105/static/css/core.css">
+<style type="text/css">
+#my_index_msg{
+    background: #162344;
+    background: rgba(22,35,68,0.9);
+    color: #fff;
+    text-shadow: rgba(0,0,0,0.8) 0 -1px 0;
+    padding: 0 0 8px 0;
+    border: 2px #dfe1e6 solid;
+    position: absolute;
+    width: 300px;
+    margin-left: -150px;
+    height: 120px;
+    margin-top: -60px;
+    left: 50%;
+    top: 50%;
+    border-radius: 9px;
+    box-shadow: rgba(0,0,0,0.7) 0 1px 2px;
+    z-index: 900;
+    display: none;
+}
+#my_index_msg .text{
+    position: relative;
+    text-align: center;
+    width: 100%;
+    height: 40px;
+    line-height: 40px;
+    top: 0;
+    left: 0;
+    font-size: 22px;
+    padding: 0;
+    margin: 15px auto;
+}
+#my_index_msg  button{
+    font-weight: bold;
+    font-size: 16px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    width: 80%;
+    border: 1px #131e3b solid;
+    display: block;
+    text-decoration: none;
+    color: #fff;
+    cursor: pointer;
+    background: -webkit-linear-gradient(top, rgba(174,178,190,0.6) 0%, rgba(106,116,139,0.6) 50%, rgba(80,90,117,0.6) 50%, rgba(95,105,129,0.6) 100%);
+    border-radius: 5px;
+    box-shadow: #454f69 0 1px 0;
+    position: relative;
+    margin: 0 auto;
+}
+#my_index_msg  button:active{
+    background: -webkit-linear-gradient(top, rgba(90,95,102,0.7) 0%, rgba(41,47,57,0.7) 50%, rgba(23,31,40,0.7) 50%, rgba(36,44,53,0.7) 100%);
+}
+</style>
+</head>
+<body class="">
+<div class="orientationchange" id="orientationchange"></div>
+<div id="add_notice" class="ui-add2home" style="display:none;">
+    <img src="./static/img/common/custom_icon_precomposed.png">
+    <p>先点击<span class="ui-add2home-icon-new"></span>，<br>再"添加至主屏幕"
+    </p>
+    <span class="ui-add2home-close" onclick="miscpop.hideAddToScreen();"><b></b></span>
+    <div class="ui-add2home-arrow">
+        <b>
+        </b>
+    </div>
+</div>
+<div id="standalonetips" class="standalonetips" show="false">
+    <a href="https://itunes.apple.com/cn/app/han-jiang-san-guo/id610346204?ls=1&mt=8"></a>
+    <span onclick="miscpop.hideStandaloneTips();" class="hide_btn"></span>
+</div>
+<!-- 大界面跳转loading -->
+<div id="initloading">
+    <div class="mask"></div>
+    <div class="initloading_wrap">
+        <div class="bar_wrap">
+            <div class="bar" id="initloading_progress">
+                <div class="light" id="initloading_progress_light"></div>
+            </div>
+            
+        </div>
+        <p id="tips">正在加载中，请耐心等待...</p>
+        <p id="updateinfo"></p>
+    </div>
+    <div class="longtimetips btn" onclick="cleanGameCache();"><b>清空游戏缓存</b></div>
+</div>
+<!-- ajaxloading-->
+<div id="ajaxloading">
+    <div class="mask"></div>
+    <div class="main"></div>
+</div>
+<!-- world loading -->
+<div id="worldloading">
+    <div class="mask"></div>
+    <div class="main"><span></span></div>
+</div>
+<div id="initmsg">
+    <div class="mask"></div>
+    <div class="main">
+        <div class="text"></div>
+        <button class="btn" id="initmsg_btn"></button>
+        <div class="waittext"></div>
+    </div>
+</div>
+
+<div id="my_index_msg">
+    <p class="text">加载失败，请重试</p>
+    <button id="initmsg_btn" onclick="window.location.reload();">确定</button>
+</div>
+
+<!-- 基础JS -->
+<script type="text/javascript" charset="utf-8" src="https://img2.hanjiangsanguo.com/h5cdn/20151225105/static/js/zepto.js"></script>
+<script type="text/javascript" charset="utf-8" src="https://img2.hanjiangsanguo.com/h5cdn/20151225105/static/js/zepto_fn.js"></script>
+<script type="text/javascript" charset="utf-8" src="https://img2.hanjiangsanguo.com/h5cdn/20151225105/static/js/iscroll.js"></script>
+<script type="text/javascript" charset="utf-8" src="https://img2.hanjiangsanguo.com/h5cdn/20151225105/static/js/autoload.js?c=11"></script>
+
+<!--<script src="http://192.168.1.91:8080/target/target-script-min.js#solo"></script>-->
+
+</body>
+</html>
