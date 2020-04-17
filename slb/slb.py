@@ -18,11 +18,11 @@ import os,sys,getopt
 # 创建 AcsClient 实例，线上阿里云key
 client = AcsClient(
     #生产
-    # "LTAIGYyHfuAWni1k",
-    # "TQOQeqQPeNOENkmNWER8g6joXEWwiQ",
+    # "",
+    # "",
     #测试
-    "LTAIvNuwjFCNgEdO",
-    "EzjBng8QLt3Gj0KQaVXsXfaBiYLq3v",
+    "key",
+    "scerkty",
     "cn-beijing"
 )
 
